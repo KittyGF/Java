@@ -124,3 +124,104 @@ for(int i = 0; i < n; i++){
 
 ```
 ---
+
+# Zbrajanje
+### sum += A[i][j];
+<br>
+
+```java
+int sum = 0;
+for(int i = 0; i < n; i++) {
+    for(int j = 0; j < n; j++) {
+        if(condition) {
+            sum += A[i][j];
+        }
+    }
+}
+System.out.println(sum);
+
+
+```
+---
+
+# Metode
+<br>
+
+```java
+public static int myFunction(int[][] A, int n) {
+    int sum = 0;
+    for(int i = 0; i < n; i++) {
+        for(int j = 0; j < n; j++) {
+            // logic
+        }
+    }
+    return sum;
+}
+
+
+```
+---
+
+# Try-catch
+<br>
+
+```java
+int x = 0;
+Scanner sc = new Scanner(System.in);
+
+while(true) {
+    try {
+        x = sc.nextInt();
+        break;
+    } catch(Exception e) {
+        System.out.println("Enter a number!");
+        sc.nextLine(); // clear bad input
+    }
+}
+
+
+
+```
+---
+
+# Threads and join
+<br>
+
+```java
+class MyThread implements Runnable {
+    int[] row;
+
+    MyThread(int[] row) {
+        this.row = row;
+    }
+
+    public void run() {
+        int sum = 0;
+        for(int x : row) sum += x;
+        System.out.println(sum);
+    }
+}
+
+```
+
+```java
+Thread t = new Thread(new MyThread(A[i]));
+t.start();
+t.join();
+
+```
+---
+
+# Transponirana matrica
+<br>
+
+```java
+for(int i = 0; i < n; i++) {
+    for(int j = 0; j < m; j++) {
+        B[j][i] = A[i][j];
+    }
+}
+
+```
+---
+

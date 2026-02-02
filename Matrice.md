@@ -167,15 +167,15 @@ public static int myFunction(int[][] A, int n) {
 
 ```java
 int x = 0;
-Scanner sc = new Scanner(System.in);
+Scanner input = new Scanner(System.in);
 
 while(true) {
     try {
-        x = sc.nextInt();
+        x = input.nextInt();
         break;
     } catch(Exception e) {
         System.out.println("Enter a number!");
-        sc.nextLine(); // clear bad input
+        input.nextLine(); // clear bad input
     }
 }
 

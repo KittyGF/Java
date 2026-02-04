@@ -225,3 +225,33 @@ for(int i = 0; i < n; i++) {
 ```
 ---
 
+
+# Faktorijel
+<br>
+
+```java
+    public static int faktorijel(int unos){
+        int fakt = 1;
+        for(int i=1; i<=unos; i++){
+            fakt*=i;
+        }
+            return fakt;
+    }
+
+```
+---
+
+
+# Potencija
+<br>
+
+```java
+    public static int potencija(int a, int b){
+        int rezultat = 1;
+        for(int i=1; i<=b; i++){
+            rezultat *=a;
+        }
+        return rezultat;
+    }
+```
+---

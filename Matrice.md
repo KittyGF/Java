@@ -309,3 +309,42 @@ System.out.println("Suma neparnih elemenata prvog stupca je: " +sumaStupca);
 ```
 ---
 
+#  Elemenati iznad i ispod sporedne dijagonale
+<br>
+
+```java
+  public static int funkcija(int A[][], int n){
+      int suma2 = 0;
+      int suma3 = 0;
+      //elementi iznad i ispod sporedne dijagonale
+      for(int i=0; i<n; i++){
+          for(int j=0; j<n; j++){
+              if(j < n - i - 1){
+                  suma2 += A[i][j];
+              }else if(j > n - i - 1){
+                  suma3 += A[i][j];
+              }
+          }
+      }
+```
+---
+
+# Koliko ima pojavljivanja broja 0, a da su oko njega sve jedinice.
+<br>
+
+```java
+    public static int brojPojavljivanja(int A [][], int n){
+        int brojac=0;
+        for(int i=1; i<n-1; i++){
+            for(int j=1; j<n-1; j++){
+                if(A[i][j] == 0 && A[i-1][j] == 1 && A[i+1][j] == 1 && A[i][j-1] == 1 && A[i][j+1] == 1){
+                    brojac++;
+                }
+            }
+        }
+        return brojac;
+    }
+
+```
+---
+

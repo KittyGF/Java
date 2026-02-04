@@ -223,6 +223,19 @@ for(int i = 0; i < n; i++) {
 }
 
 ```
+
+```java
+	
+	public static int[][] trans (int A[][], int n, int m){
+	    int B [] [] = new int[m][n];
+	    for(int i=0; i<n; i++){
+	        for(int j=0; j<m; j++){
+	            B[j][i]=A[i][j];
+	        }
+	    }
+	    return B;
+	}
+```
 ---
 
 
@@ -255,3 +268,44 @@ for(int i = 0; i < n; i++) {
     }
 ```
 ---
+
+# Aritmeticka sredina sporedne dijagonale
+<br>
+
+```java
+for(int i=0; i<a; i++){
+    suma+=matrica[i][a-i-1];
+}
+double ars = suma/a;
+System.out.println("Aritmeticka sredina sporedne dijagonale je: " + ars);
+```
+---
+
+# Suma neparnih elemenata prvog retka 
+<br>
+
+```java
+int sumaReda = 0;
+int sumaStupca = 0;
+for(int i=0; i<a; i++){
+    if(matrica [0][i] %2 != 0){
+        sumaReda+=matrica[0][i];
+        }
+    }
+System.out.println("Suma neparnih elemenata prvog retka je: " +sumaReda);
+```
+---
+
+# Suma neparnih elemenata prvog stupca 
+<br>
+
+```java
+for(int i=0; i<a; i++){
+    if(matrica[i][0]%2 != 0){
+        sumaStupca+=matrica[i][0];
+        }
+    }
+System.out.println("Suma neparnih elemenata prvog stupca je: " +sumaStupca);
+```
+---
+

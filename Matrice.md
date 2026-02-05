@@ -348,3 +348,106 @@ System.out.println("Suma neparnih elemenata prvog stupca je: " +sumaStupca);
 ```
 ---
 
+
+# Onaj zadatak
+<br>
+
+```java
+public class Osoba {
+    private String ime;
+    private String prezime;
+
+    public Osoba(String ime, String prezime) {
+        this.ime = ime;
+        this.prezime = prezime;
+    }
+
+    public String getIme() {
+        return ime;
+    }
+
+    public void setIme(String ime) {
+        this.ime = ime;
+    }
+
+    public String getPrezime() {
+        return prezime;
+    }
+
+    public void setPrezime(String prezime) {
+        this.prezime = prezime;
+    }
+
+    @Override
+    public String toString() {
+        return ime + "-" + prezime;
+    }
+}
+
+```
+```java
+public class Radnik extends Osoba {
+    private String radnikId;
+    private double placa;
+
+    public Radnik(String ime, String prezime, String radnikId, double placa) {
+        super(ime, prezime);
+        this.radnikId = radnikId;
+        this.placa = placa;
+    }
+
+    public String getRadnikId() {
+        return radnikId;
+    }
+
+    public void setRadnikId(String radnikId) {
+        this.radnikId = radnikId;
+    }
+
+    public double getPlaca() {
+        return placa;
+    }
+
+    public void setPlaca(double placa) {
+        this.placa = placa;
+    }
+
+    public void povecajPlacu(double postotak) {
+        placa += placa * postotak / 100;
+    }
+
+    @Override
+    public String toString() {
+        return getIme() + "-" + getPrezime() + "-" + radnikId + "-" +
+               String.format("%.2f", placa);
+    }
+}
+
+
+```
+
+```java
+import java.util.Scanner;
+
+public class Test {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        String ime = sc.nextLine();
+        String prezime = sc.nextLine();
+        String id = sc.nextLine();
+        double placa = sc.nextDouble();
+        double postotak = sc.nextDouble();
+
+        Radnik r = new Radnik(ime, prezime, id, placa);
+        r.povecajPlacu(postotak);
+
+        System.out.println(r);
+    }
+}
+
+```
+---
+---
+
+
